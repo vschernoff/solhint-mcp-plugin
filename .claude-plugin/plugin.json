@@ -1,0 +1,9 @@
+{
+  "name": "solhint",
+  "version": "0.1.0",
+  "description": "Lint and autofix Solidity with Solhint, from inside your coding agent.",
+  "author": { "name": "Vitaliy Chernov", "url": "https://github.com/vschernoff" },
+  "homepage": "https://github.com/vschernoff/solhint-mcp",
+  "license": "MIT",
+  "keywords": ["solidity", "solhint", "linter", "smart-contracts", "ethereum"]
+}
