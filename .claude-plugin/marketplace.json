@@ -1,5 +1,13 @@
 {
   "name": "vschernoff",
-  "owner": { "name": "Vitaliy Chernov" },
-  "plugins": [{ "name": "solhint", "source": "./" }]
+  "owner": {
+    "name": "Vitaliy Chernov"
+  },
+  "description": "Solidity tooling for coding agents, by Vitaliy Chernov.",
+  "plugins": [
+    {
+      "name": "solhint",
+      "source": "./"
+    }
+  ]
 }
