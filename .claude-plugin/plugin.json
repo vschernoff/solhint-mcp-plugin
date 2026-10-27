@@ -1,5 +1,6 @@
 {
   "name": "solhint",
+  "displayName": "solhint-mcp",
   "version": "0.1.2",
   "description": "Lint and autofix Solidity with Solhint, from inside your coding agent.",
   "author": {
@@ -17,7 +18,12 @@
     "solidity",
     "solhint",
     "linter",
+    "autofix",
     "smart-contracts",
-    "ethereum"
+    "ethereum",
+    "evm",
+    "security",
+    "hardhat",
+    "foundry"
   ]
 }

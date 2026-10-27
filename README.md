@@ -1,4 +1,4 @@
-# solhint — Claude Code plugin
+# solhint-mcp — Claude Code plugin
 
 Lint and autofix Solidity with [Solhint](https://github.com/protofire/solhint) from
 inside your coding agent, and have the agent reach for it on its own.
