@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "solhint": {
-      "command": "npx",
-      "args": ["-y", "solhint-mcp@0.1.7"]
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/node_modules/solhint-mcp/src/index.js"]
     }
   }
 }
