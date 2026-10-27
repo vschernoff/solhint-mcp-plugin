@@ -1,6 +1,6 @@
 {
   "name": "solhint-mcp-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Dependency record for the Claude Code plugin's MCP server. Not published.",
   "license": "MIT",
