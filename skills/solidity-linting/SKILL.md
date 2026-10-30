@@ -16,15 +16,23 @@ when asked.
 
 ## The tools
 
-| Tool | Use |
-| --- | --- |
-| `lint_file` | Lint one `.sol` file in the project |
-| `lint_project` | Lint a glob; autodetects `contracts/**`, then `src/**` |
-| `lint_solidity` | Lint a source string that is not on disk yet |
-| `fix_file` | Apply Solhint's own autofixes. Previews unless called with `write: true` |
-| `fix_solidity` | Autofix a source string, returns the corrected text |
-| `explain_rule` | Explain any rule by id, for a warning you do not recognise |
-| `get_config` | Show the project's effective Solhint config |
+Argument names are exact. `filePath` is not `path` or `file`; `ruleId` is not `rule`;
+`get_config` takes no arguments at all. A wrong name is rejected outright rather than
+guessed at, so read the column before the first call.
+
+| Tool | Arguments | Use |
+| --- | --- | --- |
+| `lint_file` | `{ filePath }` | Lint one `.sol` file in the project |
+| `lint_project` | `{ pattern? }` | Lint a glob; autodetects `contracts/**`, then `src/**` |
+| `lint_solidity` | `{ code, config? }` | Lint a source string that is not on disk yet |
+| `fix_file` | `{ filePath, write? }` | Apply Solhint's own autofixes. Previews unless called with `write: true` |
+| `fix_solidity` | `{ code, config? }` | Autofix a source string, returns the corrected text |
+| `explain_rule` | `{ ruleId }` | Explain any rule by id, for a warning you do not recognise |
+| `get_config` | none | Show the project's effective Solhint config |
+
+`?` marks an optional argument. `config` accepts rule maps and the built-in `solhint:*`
+presets only — an `extends` path or `plugins` is rejected, because Solhint would load it
+as code.
 
 Prefer `fix_solidity` and `fix_file` over editing by hand: Solhint's own fixes are known
 to be safe for the rules that provide them.
