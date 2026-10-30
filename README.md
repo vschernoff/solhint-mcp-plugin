@@ -16,8 +16,42 @@ At the prompt of a terminal session:
 /plugin install solhint --marketplace vschernoff/solhint-mcp-plugin
 ```
 
-Press `y` to add the marketplace, then choose a scope. Requires **Node.js 20 or newer**;
-the server is fetched with `npx` on first use.
+Press `y` to add the marketplace, then choose a scope. Requires **Node.js 20 or newer**.
+Claude Code installs the server's pinned dependencies when the plugin installs, and runs
+it from there — nothing is fetched at launch.
+
+## Try it
+
+Three prompts, each run against this plugin before being written here.
+
+**Ask for a contract and have it checked.**
+
+```
+Write a simple escrow contract in src/Escrow.sol and make sure it is clean before you finish.
+```
+
+The agent writes the contract, lints it, fixes what Solhint can fix, and reports what is
+left. A phrase like *"before you finish"* matters: it is the cue that the work is not done
+until it is checked.
+
+**Ask whether existing code is sound.**
+
+```
+Is contracts/Vault.sol OK?
+```
+
+It lints the file and reports the findings — and separates them from anything the linter
+cannot see. On a contract with a reentrancy, a real run answered with the lint warnings
+and then, under its own heading, *"Security (not caught by linter)"*.
+
+**Ask what a warning means.**
+
+```
+Solhint says 'avoid-low-level-calls' on my contract. What does that mean and should I care?
+```
+
+It explains the rule from Solhint's own metadata, for the exact Solhint version your
+project runs, and says when the warning is worth acting on and when it is not.
 
 ## What the agent gets
 
@@ -41,6 +75,16 @@ a verified contract.
 **Shipping something that holds value?** A linter is not a substitute for a human review.
 [Book a call](https://calendly.com/vitaliy-chernov/30min) if you want a smart contract
 audit.
+
+## Reporting a problem
+
+Bugs and suggestions: [open an issue](https://github.com/vschernoff/solhint-mcp-plugin/issues).
+
+Security vulnerabilities: see [SECURITY.md](SECURITY.md) — report them privately through
+a GitHub security advisory, not a public issue. If the problem is in the linting itself
+rather than in what this plugin ships, it belongs in
+[solhint-mcp](https://github.com/vschernoff/solhint-mcp); report it either place and it
+will be routed.
 
 ## Related
 
