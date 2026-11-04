@@ -1,12 +1,15 @@
 # solhint-mcp — Claude Code plugin
 
 Lint and autofix Solidity with [Solhint](https://github.com/protofire/solhint) from
-inside your coding agent, and have the agent reach for it on its own.
+inside your coding agent.
 
 Installing this plugin does two things: it configures the
 [solhint-mcp](https://www.npmjs.com/package/solhint-mcp) server, and it adds a skill that
-tells the agent to lint Solidity before calling the work finished — so you do not have to
-remember to ask.
+tells the agent to lint before treating Solidity work as finished.
+
+Ask whether a contract is OK and it lints, fixes and reports without being told to. Ask
+it to *write* one, and a phrase like "and make sure it's clean" is what reliably triggers
+the check — the cue that the work is not done until it has been looked at.
 
 ## Install
 
