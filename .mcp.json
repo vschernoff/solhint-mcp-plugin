@@ -2,7 +2,7 @@
   "mcpServers": {
     "solhint": {
       "command": "npx",
-      "args": ["-y", "solhint-mcp@0.1.8"]
+      "args": ["-y", "solhint-mcp@0.1.9"]
     }
   }
 }
