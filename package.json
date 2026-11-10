@@ -5,6 +5,6 @@
   "description": "Dependency record for the Claude Code plugin's MCP server. Not published.",
   "license": "MIT",
   "dependencies": {
-    "solhint-mcp": "0.1.8"
+    "solhint-mcp": "0.1.9"
   }
 }
